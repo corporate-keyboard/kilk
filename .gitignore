@@ -30,3 +30,4 @@ htmlcov/
 # Env files
 .env
 .env.local
+.venv/
