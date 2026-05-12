@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Subby Info MCP server.
+"""Kilk server.
 
 A read-only MCP that exposes the Subby project's documentation
 (overview, features, roadmap, glossary, tech stack, personas, data model)
@@ -60,7 +60,7 @@ SECTION_TITLES: Dict[str, str] = {
 # Server
 # ---------------------------------------------------------------------------
 
-mcp = FastMCP("subby_info_mcp")
+mcp = FastMCP("kilk")
 
 
 # ---------------------------------------------------------------------------
@@ -462,7 +462,7 @@ def project_summary() -> str:
 
 
 def main() -> None:
-    """Run the Subby Info MCP server over stdio."""
+    """Run the Kilk server over stdio."""
     mcp.run()
 
 

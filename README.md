@@ -1,4 +1,4 @@
-# Subby Info MCP
+# Kilk
 
 A read-only **Model Context Protocol** server that exposes the Subby project's documentation — overview, features, roadmap, glossary, tech stack, personas, and data model — to any MCP-aware LLM client (Claude Desktop, Claude Code, Cursor, etc.).
 
@@ -27,21 +27,21 @@ All tools are read-only and side-effect-free.
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/your-org/subby-info-mcp.git
-cd subby-info-mcp
+git clone https://github.com/corporate-keyboard/kilk.git
+cd kilk
 pip install -e .
 ```
 
 ## Run
 
 ```bash
-subby-info-mcp
+kilk
 ```
 
 Or:
 
 ```bash
-python -m subby_info_mcp.server
+python -m kilk.server
 ```
 
 The server speaks **stdio** by default — point your MCP client at the command.
@@ -54,7 +54,7 @@ Add to your MCP client config (Claude Desktop: `claude_desktop_config.json`):
 {
   "mcpServers": {
     "subby-info": {
-      "command": "subby-info-mcp"
+      "command": "kilk"
     }
   }
 }
@@ -67,8 +67,8 @@ If you prefer not to install globally:
   "mcpServers": {
     "subby-info": {
       "command": "python",
-      "args": ["-m", "subby_info_mcp.server"],
-      "cwd": "/absolute/path/to/subby-info-mcp"
+      "args": ["-m", "kilk.server"],
+      "cwd": "/absolute/path/to/kilk"
     }
   }
 }
@@ -94,13 +94,13 @@ All project knowledge lives in [`project_info/`](./project_info/) as plain markd
 # from the repo root
 git init
 git add .
-git commit -m "Initial Subby Info MCP"
+git commit -m "Initial Kilk"
 
 # create the remote repo (requires the `gh` CLI, authenticated)
-gh repo create subby-info-mcp --public --source=. --remote=origin --push
+gh repo create kilk --public --source=. --remote=origin --push
 
 # or, without gh:
-git remote add origin git@github.com:YOUR-USERNAME/subby-info-mcp.git
+git remote add origin git@github.com:YOUR-USERNAME/kilk.git
 git branch -M main
 git push -u origin main
 ```

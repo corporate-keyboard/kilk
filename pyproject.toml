@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "subby-info-mcp"
+name = "kilk"
 version = "0.1.0"
 description = "Read-only MCP server exposing the Subby project's docs, features, roadmap, and glossary."
 readme = "README.md"
@@ -22,14 +22,14 @@ dependencies = [
 ]
 
 [project.scripts]
-subby-info-mcp = "subby_info_mcp.server:main"
+kilk = "kilk.server:main"
 
 [project.urls]
-Homepage = "https://github.com/your-org/subby-info-mcp"
-Issues = "https://github.com/your-org/subby-info-mcp/issues"
+Homepage = "https://github.com/corporate-keyboard/kilk"
+Issues = "https://github.com/corporate-keyboard/kilk/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["subby_info_mcp"]
+packages = ["kilk"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"project_info" = "subby_info_mcp/project_info"
+"project_info" = "kilk/project_info"
